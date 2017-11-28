@@ -15,10 +15,12 @@ Copyright (C) 2014 PORING SOFT
 ただし、以下のファイルについては下記に著作権があります。
 
 * FlashDevelop 4.6.2
-http://www.flashdevelop.org/
-README_FD.txt、Docs/index.html を参照してください
+
+http://www.flashdevelop.org/  
+README_FD.txt、Docs/index.html を参照してください  
 
 * 吉里吉里Z 2014/3/31版
-http://krkrz.github.io/
-README_KRKRZ.txt、LICENSE_KRKRZ.txt を参照してください。
+
+http://krkrz.github.io/  
+README_KRKRZ.txt、LICENSE_KRKRZ.txt を参照してください。  
 
