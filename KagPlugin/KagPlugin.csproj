@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{07EFCCE3-4E80-4F76-B25C-66D83ADDE7D6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KagPlugin</RootNamespace>
+    <AssemblyName>KagPlugin</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\flashdevelop-4.6.3\FlashDevelop\Bin\Debug\Plugins\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\flashdevelop-4.6.3\FlashDevelop\Bin\Debug\Plugins\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="complete\KagCompletionAttrValue.cs" />
+    <Compile Include="complete\KagCompletionDataProvider.cs" />
+    <Compile Include="complete\KagCompletionListItem.cs" />
+    <Compile Include="complete\KagTagKindInfo.cs" />
+    <Compile Include="complete\KagToolTip.cs" />
+    <Compile Include="EnvPath.cs" />
+    <Compile Include="FileType.cs" />
+    <Compile Include="io\DebugTimer.cs" />
+    <Compile Include="io\FileUtil.cs" />
+    <Compile Include="io\TextEncoding.cs" />
+    <Compile Include="io\TxtEnc.cs" />
+    <Compile Include="KagComplete.cs" />
+    <Compile Include="KagStyleLexer.cs" />
+    <Compile Include="parse\AbstractKagLexer.cs" />
+    <Compile Include="parse\AbstractLexer.cs" />
+    <Compile Include="parse\CompletionUnit.cs" />
+    <Compile Include="parse\CompletionUnitManager.cs" />
+    <Compile Include="parse\ILexer.cs" />
+    <Compile Include="parse\IParser.cs" />
+    <Compile Include="parse\KagCompletionUnit.cs" />
+    <Compile Include="parse\KagLabelItem.cs" />
+    <Compile Include="parse\KagLexer.cs" />
+    <Compile Include="parse\KagMacro.cs" />
+    <Compile Include="parse\KagMacroAttr.cs" />
+    <Compile Include="parse\KagMacroLexer.cs" />
+    <Compile Include="parse\KagParser.cs" />
+    <Compile Include="parse\KagTokens.cs" />
+    <Compile Include="parse\KagUtility.cs" />
+    <Compile Include="parse\ParserService.cs" />
+    <Compile Include="parse\RegionItem.cs" />
+    <Compile Include="parse\Token.cs" />
+    <Compile Include="PluginMain.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\flashdevelop-4.6.3\PluginCore\PluginCore.csproj">
+      <Project>{61885F70-B4DC-4B44-852D-5D6D03F2A734}</Project>
+      <Name>PluginCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Icon\CheckAS.png" />
+    <EmbeddedResource Include="Icon\Class.png" />
+    <EmbeddedResource Include="Icon\Const.png" />
+    <EmbeddedResource Include="Icon\ConstPrivate.png" />
+    <EmbeddedResource Include="Icon\ConstProtected.png" />
+    <EmbeddedResource Include="Icon\Declaration.png" />
+    <EmbeddedResource Include="Icon\FilePlain.png" />
+    <EmbeddedResource Include="Icon\FolderClosed.png" />
+    <EmbeddedResource Include="Icon\FolderOpen.png" />
+    <EmbeddedResource Include="Icon\Interface.png" />
+    <EmbeddedResource Include="Icon\Intrinsic.png" />
+    <EmbeddedResource Include="Icon\Method.png" />
+    <EmbeddedResource Include="Icon\MethodPrivate.png" />
+    <EmbeddedResource Include="Icon\MethodProtected.png" />
+    <EmbeddedResource Include="Icon\Package.png" />
+    <EmbeddedResource Include="Icon\Property.png" />
+    <EmbeddedResource Include="Icon\PropertyPrivate.png" />
+    <EmbeddedResource Include="Icon\PropertyProtected.png" />
+    <EmbeddedResource Include="Icon\QuickBuild.png" />
+    <EmbeddedResource Include="Icon\Template.png" />
+    <EmbeddedResource Include="Icon\Variable.png" />
+    <EmbeddedResource Include="Icon\VariablePrivate.png" />
+    <EmbeddedResource Include="Icon\VariableProtected.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
